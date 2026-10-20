@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d18" />
+  <meta name="description" content="NiceDiet — twój nowoczesny panel treningu, diety i postępów." />
+  <title>NiceDiet — Twój progres. Twój system.</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="splash" class="splash" aria-hidden="true">
+    <div class="splash-logo"><span class="mark">N<span class="mark-dot">.</span></span></div>
+    <span class="splash-loader"></span><small>BUILD YOUR BETTER</small>
+  </div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a href="#dashboard" class="brand" data-nav="dashboard" aria-label="NiceDiet — ekran główny">
+        <div class="brand-icon">N<span>.</span></div>
+        <div class="brand-copy"><strong>nice<span>diet</span></strong><small>YOUR BETTER EVERY DAY</small></div>
+      </a>
+      <div class="nav-group"><span class="nav-label">TWOJA PRZESTRZEŃ</span>
+        <nav class="nav" aria-label="Nawigacja główna">
+          <button type="button" class="nav-link active" data-nav="dashboard"><span class="nav-ico" data-icon="grid"></span><span>Przegląd</span></button>
+          <button type="button" class="nav-link" data-nav="training"><span class="nav-ico" data-icon="dumbbell"></span><span>Trening</span></button>
+          <button type="button" class="nav-link" data-nav="nutrition"><span class="nav-ico" data-icon="utensils"></span><span>Dieta i posiłki</span></button>
+          <button type="button" class="nav-link" data-nav="progress"><span class="nav-ico" data-icon="chart"></span><span>Postępy</span></button>
+        </nav>
+      </div>
+      <div class="nav-group nav-group-secondary"><span class="nav-label">PERSONALIZACJA</span>
+        <nav class="nav" aria-label="Ustawienia">
+          <button type="button" class="nav-link" data-nav="settings"><span class="nav-ico" data-icon="settings"></span><span>Ustawienia</span></button>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="side-glow"></div>
+        <div class="sidebar-quote"><span class="sparkle">✦</span><strong>Małe kroki.<br />Wielka zmiana.</strong><p>Każdy trening to inwestycja w siebie.</p></div>
+        <div class="sidebar-version">NICEDIET <span>V1.0 · LOCAL FIRST</span></div>
+      </div>
+    </aside>
+    <div class="app-body">
+      <header class="topbar">
+        <div class="topbar-breadcrumb"><span class="breadcrumb-muted">PRZESTRZEŃ /</span> <span id="breadcrumb">Przegląd</span></div>
+        <div class="topbar-right">
+          <span class="live-indicator"><span></span> TWOJE CENTRUM PROGRESU</span>
+          <span id="todayLabel" class="date-chip"></span>
+          <div class="avatar" aria-label="Profil">W</div>
+        </div>
+      </header>
+      <main id="page" class="page" tabindex="-1"></main>
+      <footer class="footer"><span>© NiceDiet. Zbuduj własną rutynę.</span><span>Made for progress <span class="footer-star">✳</span></span></footer>
+    </div>
+  </div>
+  <nav class="mobile-nav" aria-label="Nawigacja mobilna">
+    <button type="button" data-nav="dashboard"><span data-icon="grid"></span><small>Start</small></button>
+    <button type="button" data-nav="training"><span data-icon="dumbbell"></span><small>Trening</small></button>
+    <button type="button" data-nav="nutrition"><span data-icon="utensils"></span><small>Dieta</small></button>
+    <button type="button" data-nav="progress"><span data-icon="chart"></span><small>Postępy</small></button>
+    <button type="button" data-nav="settings"><span data-icon="settings"></span><small>Opcje</small></button>
+  </nav>
+  <div id="toastHost" class="toast-host" role="status" aria-live="polite"></div>
+  <div id="modalHost"></div>
+</body>
+</html>
